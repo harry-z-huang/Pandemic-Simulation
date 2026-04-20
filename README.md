@@ -26,3 +26,4 @@ Rt​=R0​×(1−immune fraction) ; if Rt<1 disese dies out.
 
     Rt<1  ==> immune fraction > 1 - 1/R ( for typical flu R0 is between 1.2-1.5.
   
+Ref: ChatGpt
