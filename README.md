@@ -1,29 +1,35 @@
+## Environment setup and run
 
-There is no threshold that decides a pandemic level.How ever if an outbreeak grows or dies out can be
-decided by R0.
+1. Create a virtual environment (first time only):
 
-if R0 >1 → the disease spreads
+```bash
+python -m venv .venv
+```
 
-if R0<1 → the disease dies out
+2. Activate the environment:
 
-R0 is the average number of people that one infected person will pass a disease to in a population where:
+- PowerShell:
 
-1.No one is immune
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
-2. No interventions are in place (no vaccines, masks, distancing, etc.)
+- Git Bash:
 
-This concept is known as the Basic reproduction number.
+```bash
+source .venv/Scripts/activate
+```
 
-It depends on:
-1.how contagious the disease is
-2. how often people interact
-3. how long someone is infectious
-Once immunity or interventions exist, we use a different number:Rt (effective reproduction number). 
+3. Install dependencies:
 
-Herd immunity threshold = 1-1/R0
-Rt​=R0​×(1−immune fraction) ; if Rt<1 disese dies out.
-    immune fraction = (vaccinated + recovered)/total poputation
+```bash
+pip install -r requirements.txt
+```
 
-    Rt<1  ==> immune fraction > 1 - 1/R ( for typical flu R0 is between 1.2-1.5.
-  
-Ref: ChatGpt
+4. Run the simulation:
+
+```bash
+python SIR_model.py
+```
+
+5. Examine the model outputs in the "output" folder
